@@ -15,6 +15,16 @@ public class Usercontroller {
 
     @Autowired
     Userservice userservice;
+
+    @GetMapping("/")
+    public String fetch()
+    {
+
+        return "<h1>Hi! This is Movies Tv Series Website Backend.</h1><br>"+
+                "<h1>To use Login page, Send Email and Password.</h1><br>"+
+                "<h1>To use Signup page, Send Email, Name, Age, Mobilenumber, Password.</h1><br>"+
+                "<h1>To use Forget page, Send Email and new Password.</h1>";
+    }
     @GetMapping("/alluser")
     public List<User> alluser()
     {
